@@ -1,0 +1,60 @@
+Movie Details Template:
+
+Each movie page should include:
+- Title
+- Genre (Comedy, Action, Family, Christmas, Drama, Thriller, Series)
+- Year
+- Duration
+- Director/Studio
+- Rating
+- Description (About the movie)
+- Language & Subtitles
+- Quality (HD 1080p, 4K, etc)
+- Cast
+- Download button linking to movie file
+- Back button to home
+- Footer with navigation
+
+Movie Information:
+
+COMEDY:
+1. Igbudu - 2023 - 98 mins - John Okonkwo
+2. Bad Company - 2023 - 105 mins - Tunde Awotona
+3. My Settlement - 2023 - 92 mins - Kunle Afolayan
+4. The Isakaba - 2022 - 110 mins - Oladayo Oladayo
+
+ACTION:
+1. Saviour - 2023 - 115 mins - Adekunle Gold
+2. Robocop - 2023 - 108 mins - Director Name
+3. Formula 1 - 2023 - 120 mins - Documentary
+4. The Vault - 2023 - 105 mins - Director Name
+
+FAMILY:
+1. Omugwo - 2023 - 100 mins - Jide Oladayo
+2. Family Problem - 2023 - 95 mins - Director Name
+3. Family Reunion - 2023 - 102 mins - Director Name
+4. The Family Business - 2023 - 118 mins - Director Name
+
+CHRISTMAS:
+1. Home Alone - 2023 - 103 mins - Chris Columbus
+2. Red One - 2023 - 108 mins - Jake Kasdan
+3. Candy Lane - 2023 - 92 mins - Director Name
+4. Christmas In Miami - 2023 - 105 mins - Director Name
+
+DRAMA:
+1. Ukwa - 2023 - 110 mins - Jide Oladayo
+2. The Overheating - 2023 - 96 mins - Director Name
+3. Deceivers - 2023 - 115 mins - Director Name
+4. Open & Close - 2023 - 99 mins - Director Name
+
+THRILLER:
+1. The Herd - 2023 - 104 mins - Director Name
+2. Citation - 2023 - 100 mins - Kunle Afolayan
+3. The Betrayed - 2023 - 107 mins - Director Name
+4. Knives Out - 2023 - 130 mins - Rian Johnson
+
+SERIES:
+1. Night Agent - 2023 - Series - Director Name
+2. Bad Boys For Life - 2023 - 124 mins - Director Name
+3. The Extraction - 2023 - 123 mins - Director Name
+4. John Wick - 2023 - 169 mins - Director Name

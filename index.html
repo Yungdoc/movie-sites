@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Miles Showmix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="navbar">
+            <h2>Miles Showmix</h2>           
+            <div class="nav-link">
+              <a href="#" data-origin="hollywood">Hollywood</a>
+              <a href="#" data-origin="nollywood">Nollywood</a>
+              <a href="#">Category</a>
+              <a href="#">Live</a>
+              <span class="live-dot">•</span>
+            </div>
+            <div class="srch-bar">
+              <input id="searchInput" type="text" placeholder="Search">
+              <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="clearBtn" class="clear-btn" title="Clear search">✕</button>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="#" data-origin="hollywood">Hollywood</a>
+          <a href="#" data-origin="nollywood">Nollywood</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Category</a>
+            <a href="#">Live</a>
+            <span class="live-dot">•</span>
+            <div class="close-x" id="closeX">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-container">
+        <div class="sub-top-cont">
+            <h1>Miles Showmix</h1>
+            <h3>Unlimited Entertainment, Movies, TV Shows & More</h3>
+            <h3>Your one-stop destination for the latest shows</h3>
+            <div class="cont-list">
+                <p>Movie</p>
+                <p>HD</p>
+                <a href="#">Drama & Comedy</a>
+            </div>
+        </div>
+        
+        <div class="image-slider">
+            <div class="slider-wrapper">
+                <img src="smallfootpic.jpeg" alt="Show 1">
+                <img src="christmasmiami.jpeg" alt="show 2">
+                <img src="detained.jpeg" alt="Show 3">
+                <img src="formula1pic.jpeg" alt="Show 4">
+                <img src="osuofiainlondonpic.jpeg" alt="Show 5">
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter bar (All/Genres) - placed below the hero/slider -->
+    <div id="filterBar" class="filter-bar">
+      <div class="filter-inner">
+        <div class="filter-buttons">
+          <button class="filter-btn" data-genre="all">All</button>
+          <button class="filter-btn" data-genre="comedy">Comedy</button>
+          <button class="filter-btn" data-genre="action">Action</button>
+          <button class="filter-btn" data-genre="family">Family</button>
+          <button class="filter-btn" data-genre="christmas">Christmas</button>
+          <button class="filter-btn" data-genre="drama">Drama</button>
+          <button class="filter-btn" data-genre="thriller">Thriller</button>
+          <button class="filter-btn" data-genre="series">Series</button>
+        </div>
+        <!-- filter actions intentionally left empty for desktop; the 'Next Page' CTA is available above the footer -->
+        <div class="filter-actions"></div>
+      </div>
+    </div>
+    </div>
+
+      <!-- All Movies unified section (home page view) -->
+      <section class="show-section all-section">
+        <div class="section-header">
+          <h2 class="section-title">🎬 All Movies</h2>
+          <p class="section-subtitle">Browse every title — click a header tab to filter by origin</p>
+        </div>
+        <div class="show-list all-list" data-genre="all">
+          <!-- JS will populate this with all .show-item tiles from the page -->
+        </div>
+      </section>
+
+    <!-- Comedy Section -->
+    <section class="show-section comedy-section">
+        <div class="section-header">
+            <h2 class="section-title">🎭 Comedy</h2>
+            <p class="section-subtitle">Laugh your heart out with hilarious movies</p>
+        </div>
+        <div class="show-list" data-genre="comedy">
+            <div class="show-item">
+              <a href="Igbudu.html">
+                <div class="item-image-wrapper">
+                    <img src="igbudupic.jpeg" alt="Comedy 1">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Igbudu</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.5</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Bad Company.html"> 
+                <div class="item-image-wrapper">
+                    <img src="badcompanypic.jpeg" alt="Comedy 2">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Bad Company</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.2</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="My Settlement.html"> 
+                <div class="item-image-wrapper">
+                    <img src="mysettlementpic.jpeg" alt="Comedy 3">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>My Settlement</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.0</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="The isakaba.html"> 
+                <div class="item-image-wrapper">
+                    <img src="theisakabapic.jpeg" alt="Comedy 4">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>The Isakaba</h3>
+                <p class="rating"><i class="fas fa-star"></i> 7.9</p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Section -->
+    <section class="show-section action-section">
+        <div class="section-header">
+            <h2 class="section-title">💥 Action</h2>
+            <p class="section-subtitle">High-octane thrills and epic adventures</p>
+        </div>
+        <div class="show-list" data-genre="action">
+            <div class="show-item">
+              <a href="Saviour.html">
+                <div class="item-image-wrapper">
+                    <img src="jumanjipic.jpeg" alt="Action 1">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Saviour</h3>
+                <p class="rating"><i class="fas fa-star"></i> 9.0</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Robocop.html"> 
+                <div class="item-image-wrapper">
+                    <img src="robocoppic.jpeg" alt="Action 2">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Robocop</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.7</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Formula 1.html"> 
+                <div class="item-image-wrapper">
+                    <img src="formula1pic.jpeg" alt="Action 3">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Formula 1</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.8</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="The Vault.html"> 
+                <div class="item-image-wrapper">
+                    <img src="thevaultpic.jpg" alt="Action 4">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>The Vault</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.9</p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Section -->
+    <section class="show-section family-section">
+        <div class="section-header">
+            <h2 class="section-title">👨‍👩‍👧‍👦 Family</h2>
+            <p class="section-subtitle">Entertainment for all ages</p>
+        </div>
+        <div class="show-list" data-genre="family">
+            <div class="show-item">
+              <a href="Omugwo.html">
+                <div class="item-image-wrapper">
+                    <img src="Omugwopic.jpeg" alt="Family 1">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Omugwo</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.3</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Family Problem.html"> 
+                <div class="item-image-wrapper">
+                    <img src="familyproblempic.jpeg" alt="Family 2">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Family Problem</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.1</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Family Reunion.html"> 
+                <div class="item-image-wrapper">
+                    <img src="familyreunionpic.jpeg" alt="Family 3">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Family Reunion</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.4</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="The Family Business.html"> 
+                <div class="item-image-wrapper">
+                    <img src="thefamilybusinesspic.jpeg" alt="Family 4">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>The Family Business</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.2</p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Christmas Section -->
+    <section class="show-section christmas-section">
+        <div class="section-header">
+            <h2 class="section-title">🎄 Christmas Specials</h2>
+            <p class="section-subtitle">Festive movies to celebrate the season</p>
+        </div>
+        <div class="show-list" data-genre="christmas">
+            <div class="show-item">
+              <a href="Home Alone.html">
+                <div class="item-image-wrapper">
+                    <img src="homealonepic.jpeg" alt="Christmas 1">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Home Alone</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.6</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Red One.html"> 
+                <div class="item-image-wrapper">
+                    <img src="redonepic.jpeg" alt="Christmas 2">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Red One</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.5</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Candy Lane.html"> 
+                <div class="item-image-wrapper">
+                    <img src="candylanepic.jpeg" alt="Christmas 3">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Candy Lane</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.7</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Christmas In Miami.html"> 
+                <div class="item-image-wrapper">
+                    <img src="christmasmiami.jpeg" alt="Christmas 4">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Christmas In Miami</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.8</p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drama Section -->
+    <section class="show-section drama-section">
+        <div class="section-header">
+            <h2 class="section-title">🎬 Drama</h2>
+            <p class="section-subtitle">Emotionally compelling stories</p>
+        </div>
+        <div class="show-list" data-genre="drama">
+            <div class="show-item">
+              <a href="Ukwa.html">
+                <div class="item-image-wrapper">
+                    <img src="ukwaapic.jpeg" alt="Drama 1">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Ukwa</h3>
+                <p class="rating"><i class="fas fa-star"></i> 9.1</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="The Overheating.html"> 
+                <div class="item-image-wrapper">
+                    <img src="theoverheatingpic.jpeg" alt="Drama 2">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>The Overheating</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.9</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Deceivers.html"> 
+                <div class="item-image-wrapper">
+                    <img src="Deceiverspic.jpeg" alt="Drama 3">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Deceivers</h3>
+                <p class="rating"><i class="fas fa-star"></i> 9.0</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Open & Close.html"> 
+                <div class="item-image-wrapper">
+                    <img src="open&close.jpeg" alt="Drama 4">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Open & Close</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.8</p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thriller Section -->
+    <section class="show-section thriller-section">
+        <div class="section-header">
+            <h2 class="section-title">😱 Thriller & Mystery</h2>
+            <p class="section-subtitle">Keep you on the edge of your seat</p>
+        </div>
+        <div class="show-list" data-genre="thriller">
+            <div class="show-item">
+              <a href="The Herd.html">
+                <div class="item-image-wrapper">
+                    <img src="theherdpic.jpeg" alt="Thriller 1">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>The Herd</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.4</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Citation.html"> 
+                <div class="item-image-wrapper">
+                    <img src="citationpic.jpeg" alt="Thriller 2">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Citation</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.6</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="The Betrayed.html"> 
+                <div class="item-image-wrapper">
+                    <img src="thebetrayedpic.jpeg" alt="Thriller 3">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>The Betrayed</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.5</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Knives Out.html"> 
+                <div class="item-image-wrapper">
+                    <img src="knivesoutpic.avif" alt="Thriller 4">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Knives Out</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.3</p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Series/TV Shows Section -->
+    <section class="show-section series-section">
+        <div class="section-header">
+            <h2 class="section-title">📺 TV Series</h2>
+            <p class="section-subtitle">Binge-worthy series and episodes</p>
+        </div>
+        <div class="show-list" data-genre="series">
+            <div class="show-item">
+              <a href="Night Agent.html">
+                <div class="item-image-wrapper">
+                    <img src="nightagentpic.jpeg" alt="Series 1">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Night Agent</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.9</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="Bad Boys For Life.html"> 
+                <div class="item-image-wrapper">
+                    <img src="badboyspic.jpeg" alt="Series 2">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>Bad Boys For Life</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.7</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="The Extraction.html"> 
+                <div class="item-image-wrapper">
+                    <img src="extractionpic.jpeg" alt="Series 3">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>The Extraction</h3>
+                <p class="rating"><i class="fas fa-star"></i> 9.0</p>
+              </a>
+            </div>
+            <div class="show-item">
+              <a href="John Wick.html"> 
+                <div class="item-image-wrapper">
+                    <img src="johnwickpic.jpeg" alt="Series 4">
+                    <div class="overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <h3>John Wick</h3>
+                <p class="rating"><i class="fas fa-star"></i> 8.8</p>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next page block (above footer) -->
+    <section class="next-page-section">
+      <div class="next-page-inner">
+        <a class="next-page-btn" href="index.html?view=more">See all titles — Next Page ▶</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Miles Showmix</h3>
+                <p>Your one-stop destination for unlimited entertainment, movies, TV shows, and more. Stream your favorite content anytime, anywhere.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#comedy">Comedy</a></li>
+                    <li><a href="#action">Action</a></li>
+                    <li><a href="#family">Family</a></li>
+                    <li><a href="#christmas">Christmas</a></li>
+                    <li><a href="#drama">Drama</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Email:</strong> info@milesshowmix.com</p>
+                <p><strong>Phone:</strong> +234 814-173-4855</p>
+                <p><strong>Address:</strong>No 3 Entertainment Ave, Movie City, MC 16445</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Miles Showmix. All rights reserved. | <a href="#" style="color: #e50914;">Terms & Conditions</a> | <a href="#" style="color: #e50914;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="movie.js"></script>
+</body>
+</html>

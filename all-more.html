@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Movies — More</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="refresh" content="0; url=index.html?view=more">
+</head>
+<body>
+    <header class="nav">
+        <div class="navbar">
+            <h2>Miles Showmix</h2>
+            <div class="nav-link">
+              <a href="index.html">Home</a>
+              <a href="#">Category</a>
+              <a href="#">Live</a>
+              <span class="live-dot">•</span>
+            </div>
+            <div class="srch-bar">
+              <input id="searchInput" type="text" placeholder="Search">
+              <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="clearBtn" class="clear-btn" title="Clear search">✕</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="show-section more-section">
+            <div class="section-header">
+                <h2 class="section-title">📚 All Movies — More</h2>
+                <p class="section-subtitle">Full mixed list — all remaining titles (not limited to featured)</p>
+            </div>
+            <div class="show-list more-list" data-genre="all">
+                <!-- JS will populate with a full copy of the mixed movie list -->
+            </div>
+        </section>
+    </main>
+
+    <script src="movie.js"></script>
+</body>
+</html>
