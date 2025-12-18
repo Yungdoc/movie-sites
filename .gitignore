@@ -14,3 +14,6 @@ dist/
 # Ignore large media files
 *.mp4
 media/
+
+# Local Netlify folder
+.netlify
