@@ -17,6 +17,18 @@
             --muted: #666666;
         }
 
+        /* Ensure navbar links and hamburger bars are visible on light background */
+        [data-theme="light"] .nav-link a,
+        [data-theme="light"] .nav-link a:link,
+        [data-theme="light"] .nav-link a:visited {
+            color: var(--text);
+            
+        }
+
+        [data-theme="light"] .hamburger .bar {
+            background: var(--text);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -68,7 +80,7 @@
         }
 
         .nav-link a {
-            color: #fff;
+            color: var(--text);
             text-decoration: none;
             font-size: 15px;
             font-weight: 500;
@@ -155,7 +167,7 @@
         .hamburger .bar {
             width: 25px;
             height: 3px;
-            background: #fff;
+            background: var(--text);
             transition: 0.3s;
         }
 
@@ -343,7 +355,7 @@
         }
 
         .sub-top-cont h3 {
-            color: #fff;
+            color: var(--text);
             font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 400;
@@ -368,7 +380,7 @@
         }
 
         .cont-list a {
-            color: #fff;
+            color: var(--text);
             text-decoration: none;
             padding: 8px 20px;
             border: 2px solid #e50914;
@@ -460,7 +472,7 @@
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            color: #fff;
+            color: var(--text);
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -562,7 +574,7 @@
 
         .show-item h3 {
             font-size: 1.1rem;
-            color: #fff;
+            color: var(--text);
             margin: 10px 0;
             transition: color 0.3s ease;
         }
@@ -570,8 +582,6 @@
         .show-item:hover h3 {
             color: #e50914;
         }
-
-        /* origin badges removed — no segregation on the home page */
 
         /* Highlight matched substring in titles */
         .show-list h3 mark {
@@ -928,7 +938,7 @@
         }
 
         .meta-item span {
-            color: #fff;
+            color: var(--text);
             font-size: 1.1rem;
         }
 
@@ -1067,7 +1077,7 @@
 
         .mobile-filter-btn {
             background: rgba(255,255,255,0.04);
-            color: #fff;
+            color: var(--text);
             border: 1px solid rgba(255,255,255,0.04);
             padding: 8px 12px;
             border-radius: 6px;
@@ -1117,18 +1127,20 @@
 
         /* All section tweaks */
         .all-section .section-title {
-            color: #fff;
+            color: var(--text);
         }
 
         .filter-btn {
             background: rgba(255,255,255,0.06);
-            color: #fff;
+            color: var(--text);
             border: 1px solid rgba(255,255,255,0.04);
             padding: 8px 14px;
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.2s ease;
         }
+
+        .filter-btn.active { color: #fff; }
 
         .filter-btn:hover {
             background: #e50914;
@@ -1164,7 +1176,7 @@
         }
 
         .comments-section h3 {
-            color: #fff;
+            color: var(--text);
             margin-bottom: 12px;
         }
 
@@ -1187,8 +1199,8 @@
 
         .comments-section form { display: flex; flex-direction: column; gap: 8px; }
         .comments-section input[type="text"], .comments-section textarea {
-            background: rgba(0,0,0,0.6);
-            color: #fff;
+            background: var(--input-bg);
+            color: var(--text);
             border: 1px solid rgba(255,255,255,0.06);
             padding: 10px;
             border-radius: 6px;
