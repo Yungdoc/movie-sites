@@ -3,6 +3,60 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuOverlay = document.getElementById('menuOverlay');
     const closeX = document.getElementById('closeX');
 
+    // Theme toggle (light / dark) - injects a button into the navbar and persists choice in localStorage
+    const themeToggleId = 'themeToggle';
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        updateThemeIcon(theme);
+    }
+    function updateThemeIcon(theme) {
+        const btn = document.getElementById(themeToggleId);
+        if (!btn) return;
+        const icon = btn.querySelector('i');
+        if (!icon) return;
+        if (theme === 'light') {
+            icon.className = 'fas fa-sun';
+            btn.setAttribute('aria-label','Switch to dark mode');
+            btn.title = 'Switch to dark mode';
+        } else {
+            icon.className = 'fas fa-moon';
+            btn.setAttribute('aria-label','Switch to light mode');
+            btn.title = 'Switch to light mode';
+        }
+    }
+    function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    }
+    function createThemeToggle() {
+        if (document.getElementById(themeToggleId)) return;
+        const btn = document.createElement('button');
+        btn.id = themeToggleId;
+        btn.className = 'theme-toggle';
+        btn.type = 'button';
+        btn.innerHTML = '<i class="fas fa-moon"></i>';
+        btn.addEventListener('click', toggleTheme);
+        // try to place it after the search bar if present otherwise append to navbar
+        const srch = document.querySelector('.srch-bar');
+        if (srch && srch.parentNode) srch.parentNode.insertBefore(btn, srch.nextSibling);
+        else {
+            const nav = document.querySelector('.navbar');
+            if (nav) nav.appendChild(btn);
+        }
+    }
+    function initTheme() {
+        createThemeToggle();
+        const saved = localStorage.getItem('theme');
+        if (saved) setTheme(saved);
+        else {
+            const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            setTheme(prefersLight ? 'light' : 'dark');
+        }
+    }
+    // initialize theme UI
+    initTheme();
+
     if (hamburger && menuOverlay) {
         hamburger.addEventListener('click', () => {
             // populate mobile menu with movie list before showing
