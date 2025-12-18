@@ -10,3 +10,7 @@ dist/
 # Env & logs
 .env
 *.log
+
+# Ignore large media files
+*.mp4
+media/
